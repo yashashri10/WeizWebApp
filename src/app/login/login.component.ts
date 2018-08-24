@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { MatFormField } from '@angular/material';
 
 @Component({
   selector: 'app-login',
@@ -9,17 +8,20 @@ import { MatFormField } from '@angular/material';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  userObj: any;
   loginForm: FormGroup;
   isFormSubmmited = false;
-
+  userObj = {
+    email: 'test@mailinator.com',
+    password: '1234'
+  };
   constructor( private router: Router) { }
 
   ngOnInit() {
   }
 
-  onLogin(user) {
-    console.log('on click----');
+  onLogin() {
+    console.log('on click----1');
+    this.router.navigate(['/dashboard']);
   }
 
 }

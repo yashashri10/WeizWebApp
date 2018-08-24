@@ -6,7 +6,7 @@ import { MaterialModule } from './material.modules';
 import { AppComponent } from './app.component';
 import { RoutesModule } from './app.routes';
 import { LoginComponent } from './login/login.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
+import { DashboardModule } from './dashboard/dashboard.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TourFormComponent } from './tour-form/tour-form.component';
 
@@ -14,7 +14,6 @@ import { TourFormComponent } from './tour-form/tour-form.component';
   declarations: [
     AppComponent,
     LoginComponent,
-    DashboardComponent,
     TourFormComponent
   ],
   imports: [
@@ -23,7 +22,8 @@ import { TourFormComponent } from './tour-form/tour-form.component';
     ReactiveFormsModule,
     BrowserAnimationsModule,
     RoutesModule,
-    MaterialModule
+    MaterialModule,
+    DashboardModule
   ],
   exports: [ LoginComponent ],
   providers: [],

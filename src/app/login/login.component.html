@@ -7,16 +7,16 @@
           <li class="field-label">
             <mat-form-field floatLabel="never">
               <input type="email" email matInput id="email" #email="ngModel" ngControl="email" name="email" [(ngModel)]="userObj.email"
-                pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" [ngClass]="{'has-error': (userObj.email === '' || email.hasError('email')) && isFormSubmmited === true}"
-                placeholder="Email Address" (change)="onFormChange()">
+                pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"
+                placeholder="Email Address">
             </mat-form-field>
 
           </li>
           <li class="field-label">
             <mat-form-field class="btn-block" floatLabel="never">
               <input type="password" matInput id="password" ngControl="password" #password="ngModel" name="password" [(ngModel)]="userObj.password"
-                placeholder="Password" autocomplete="false" [ngClass]="{'has-error':userObj.password === '' && isFormSubmmited === true}"
-                (change)="onFormChange()">
+                placeholder="Password" autocomplete="false" 
+                >
             </mat-form-field>
           </li>
           <li class="row">
