@@ -1,0 +1,24 @@
+<form [formGroup]="tourForm">
+
+  <label>
+    Destination: <input formControlName="title" />
+  </label>
+  <h2>Schedule date</h2>
+
+  <label>
+    From Date: 
+    <mat-form-field>
+      <input matInput [matDatepicker]="picker" placeholder=" From Date Choose a date">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+  </label>
+  <label>
+    To Date:
+    <mat-form-field>
+      <input matInput [matDatepicker]="picker" placeholder=" To Date Choose a date">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+  </label>
+</form>
